@@ -2,8 +2,9 @@ package DS.driverfactory;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.safari.SafariDriver;
+
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -28,8 +29,8 @@ public class Driverfactory {
 				WebDriverManager.firefoxdriver().setup();
 				tldriver.set(new FirefoxDriver());
 			} 
-			else if (browser.equals("safari")) {
-				tldriver.set(new SafariDriver());
+			else if (browser.equals("edge")) {
+				tldriver.set(new EdgeDriver());
 			} 
 			else {
 				System.out.println(" browser value: " + browser);
