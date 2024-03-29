@@ -8,15 +8,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Driverfactory {
 
-	public static class DriverFactory {
-
-		public WebDriver driver;
+	public  class Driverfactory {
+		
+		public static WebDriver driver;
 
 		public static ThreadLocal<WebDriver> tldriver = new ThreadLocal<>();
 
-		
 		public WebDriver init_driver(String browser) {
 
 			System.out.println("browser value is: " + browser);
@@ -45,8 +43,13 @@ public class Driverfactory {
 		public static synchronized WebDriver getDriver() {
 			return tldriver.get();
 		}
+	   /* public static synchronized void setDriver(WebDriver driver) {
+	        tldriver.set(driver);
+	    }*/
+
+		
+
 	}
 	
-	//driver factory
 	
-}
+
