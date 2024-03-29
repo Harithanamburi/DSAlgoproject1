@@ -13,9 +13,8 @@ public class Configreader {
 
 			prop = new Properties();
 			try {
-				FileInputStream ip = new FileInputStream(".src/test/resources/Config.properties/configproperties");
-				prop.load(ip);
-
+				FileInputStream ip = new FileInputStream(".\\src\\test\\resources\\Config.properties\\configproperties");
+				prop.load(ip);								
 			}
 			catch (FileNotFoundException e) {
 				e.printStackTrace();
