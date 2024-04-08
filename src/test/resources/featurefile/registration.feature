@@ -51,11 +51,20 @@ Feature: Registartion page
       |    					 | adf234   |            
       |     ffewfs   | vnjk876  | 
 	
-   Scenario: open login page
-   Given open login page 
-	When user enter valid username "Testers" 
-	Then user enter valid  password "Numpy@123"
-	Then click on login button
+    
+    #Scenario: open login page
+   #Given open login page 
+#	When user enter valid username "Testers" 
+#	Then user enter valid  password "Numpy@123"
+#	Then click on login button
+
+Scenario: open login page
+   Given open login page 	
+	 When user enter valid "<username>", "<password>"
+	 And click on login button
 	
+	 Examples:
+    |  username    |password|
+    |  Testers     |Numpy@123|
 	
    

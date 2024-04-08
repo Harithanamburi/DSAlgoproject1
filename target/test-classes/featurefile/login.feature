@@ -13,6 +13,9 @@ Background: Given open the browser
     Then user gets alert message "You are not logged in"
 		When  user clicks registration link
   Then user should redirectred to registration form
+  
+   
      
+   
  
    

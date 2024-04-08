@@ -15,7 +15,7 @@ public class registrationpage {
 	}	
 	
 	private By uname = By.xpath("//input[@id='id_username']");
-	private By pword = By.xpath("//input[@id='id_password1']");
+	private By pword = By.xpath("//input[@id='id_password']");
 	private By confirmpwd = By.xpath("//input[@id='id_password2']");
 	private By reg = By.xpath("//input[@type='submit']");
 	private By msg = By.xpath("//div[@class='alert alert-primary']");
@@ -31,6 +31,7 @@ public class registrationpage {
 
 		 public void enterpassword(String password) {
 			 driver.findElement(pword).sendKeys(password);
+			 
 		 }
 
 		 public void entercnfirmpwd(String cpwd) {
@@ -79,9 +80,40 @@ public class registrationpage {
 		 public void loginpassword(String passwrd1) {
 			 driver.findElement(pass_word).sendKeys(passwrd1);
 		 }
-		 //public void loginerrormsg()  {
-			// driver.findElement(errormsg).getText();
-			 
-		// }
-		 
+//         //valid user credentials
+//		 
+		 public void validUserName(String username){		 
+	 
+		driver.findElement(uname).sendKeys(username);
+	}
+	
+	public void validPassword(String password) {
+		
+	driver.findElement(pword).sendKeys(password);
+		
+	}
+	
+	public void dologin(String un, String pwd){
+		System.out.println("login with: " + un + " and " + pwd);
+		driver.findElement(uname).sendKeys(un);
+		driver.findElement(pword).sendKeys(pwd);
+		driver.findElement(log_in).click();
+		
+	}
+	private By agetstartedarray = By.xpath("//a[@href='array']");
+	//Bhavana code
+	public void dosignin(String un, String pwd) {
+		
+		System.out.println("login with: " + un + " and " + pwd);
+		driver.findElement(uname).sendKeys(un);
+		driver.findElement(pword).sendKeys(pwd);
+		driver.findElement(log_in).click();
+		driver.findElement(agetstartedarray).click();
 }
+	
+	
+	
+	}
+	
+	
+

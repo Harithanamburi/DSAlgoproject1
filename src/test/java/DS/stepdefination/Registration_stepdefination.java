@@ -30,7 +30,7 @@ public class Registration_stepdefination {
 	}
 
 	@Then("user enters the password {string}")
-	public void user_enters_the_password(String password) {
+	public void user_enters_the_password(String password) throws Exception {
 	  register.enterpassword(password);
 	}
 	
@@ -152,7 +152,39 @@ public class Registration_stepdefination {
 	
 	//valid login 
 	
+	@Given("open login page")
+	public void open_login_page() {
+		
+		Driverfactory.getDriver().get("https://dsportalapp.herokuapp.com/login");
+		}
 	
+	@When("user enter valid username {string}")
+	public void user_enter_valid_username(String username) {
+		register.validUserName(username);
+	 
+	}
+
+	@Then("user enter valid  password {string}")
+	public void user_enter_valid_password(String password) {
+	
+		register.validPassword(password);
+		
+	}
+	
+	@When("user enter valid {string}, {string}")
+	public void user_enter_valid(String username, String password) {
+	    register.loginusername(username);
+	    register.loginpassword(password);
+		
+	}
+	
+	@Then("click on login button2")
+	public void click_on_login_button2() throws InterruptedException  
+	{
+		register.clickloginbutton();
+		Thread.sleep(2000);
+	}
+
 
 
 
