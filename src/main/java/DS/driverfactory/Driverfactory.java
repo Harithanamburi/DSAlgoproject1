@@ -2,7 +2,6 @@ package DS.driverfactory;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -21,10 +20,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 			System.out.println("browser value is: " + browser);
 
 			if (browser.equals("chrome")) {
-				ChromeOptions cr = new ChromeOptions();
-				cr.addArguments("disable-dev-shm-usage");
 				WebDriverManager.chromedriver().setup();
-				tldriver.set(new ChromeDriver(cr));
+				tldriver.set(new ChromeDriver());
 			}
 			else if (browser.equals("firefox")) {
 				WebDriverManager.firefoxdriver().setup();
