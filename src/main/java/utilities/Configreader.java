@@ -13,7 +13,11 @@ public class Configreader {
 
 			prop = new Properties();
 			try {
+<<<<<<< HEAD
+				FileInputStream ip = new FileInputStream("/Users/muvva/eclipse-workspace/DSAlgoproject1/src/test/resources/Config.properties/configproperties");
+=======
 				FileInputStream ip = new FileInputStream(".\\src\\test\\resources\\Config.properties\\configproperties");
+>>>>>>> main
 				prop.load(ip);								
 			}
 			catch (FileNotFoundException e) {

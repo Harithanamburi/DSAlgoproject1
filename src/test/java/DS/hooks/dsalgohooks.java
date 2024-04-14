@@ -35,8 +35,11 @@ public class dsalgohooks {
 	@Before(order = 1)
 	public void launchBrowser() {
 		String browserName = prop.getProperty("browser");
+<<<<<<< HEAD
+=======
 		//String Url=prop.getProperty("url");
 		//driver.navigate().to(Url);
+>>>>>>> main
 		driverFactory = new Driverfactory();
 		driver = driverFactory.init_driver(browserName);
 		System.out.println(driver);
