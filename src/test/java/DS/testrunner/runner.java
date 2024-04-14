@@ -6,16 +6,13 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions
-		(features={"src/test/resources/featurefile/login.feature"},
+@CucumberOptions(
+		features={"src/test/resources/featurefile"},
 		glue ={"DS.stepdefination", "DS.hooks"},
 		dryRun=false,
 		monochrome=true,
-		plugin={"pretty"})
-
-
-
-
-public class login {
+		plugin = {"pretty","html:htmlreports/target.html"}
+	)			
+public class Runner {
 
 }
