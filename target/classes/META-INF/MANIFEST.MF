@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 Manifest-Version: 1.0
 Built-By: muvva
 Build-Jdk: 22
 Created-By: Maven Integration for Eclipse
 
-=======
-Manifest-Version: 1.0
-Built-By: radha
-Build-Jdk: 21.0.2
-Created-By: Maven Integration for Eclipse
-
->>>>>>> main
