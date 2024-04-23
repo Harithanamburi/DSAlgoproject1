@@ -1,6 +1,13 @@
 package DS.hooks;
 
-	
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
@@ -17,43 +24,54 @@ import DS.driverfactory.Driverfactory;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import utilities.Configreader;
+import utilities.ConfigReader;
 
 public class dsalgohooks {
 
-	
 	private Driverfactory driverFactory;
 	private WebDriver driver;
-	private Configreader configReader;
+	private ConfigReader configReader;
 	Properties prop;
+
+	
 	@Before(order = 0)
 	public void getProperty() {
-		configReader = new Configreader();
+		configReader = new ConfigReader();
 		prop = configReader.init_prop();
 	}
 
+	
 	@Before(order = 1)
 	public void launchBrowser() {
-		String browserName = prop.getProperty("browser");
+		String browserName = ConfigReader.getBrowser();
 		driverFactory = new Driverfactory();
 		driver = driverFactory.init_driver(browserName);
-		System.out.println(driver);
+
 	}
 
+	
 	@After(order = 0)
 	public void quitBrowser() {
-		driver.quit();
+		// Driverfactory.getDriver().quit();
+		if (driver != null) {
+			driver.quit();
+		} else {
+			System.out.println("WebDriver object is null. Cannot quit browser.");
+		}
 	}
 
+	
 	@After(order = 1)
 	public void tearDown(Scenario scenario) {
 		if (scenario.isFailed()) {
 			// take screenshot:
 			String screenshotName = scenario.getName().replaceAll(" ", "_");
-	        byte[] sourcePath = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-	        scenario.attach(sourcePath, "image/png", screenshotName);
+			if (driver != null) {
+				byte[] sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+				scenario.attach(sourcePath, "image/png", screenshotName);
 
-			
+			}
+
 		}
 	}
 

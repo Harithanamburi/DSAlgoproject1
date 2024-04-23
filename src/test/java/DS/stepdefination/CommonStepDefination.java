@@ -1,5 +1,6 @@
 package DS.stepdefination;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 import DS.driverfactory.Driverfactory;
@@ -10,6 +11,7 @@ import DS.pages.DataStructurePage;
 import DS.pages.Treepage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class CommonStepDefination {
 
@@ -37,18 +39,19 @@ public class CommonStepDefination {
 	@Then("User clicks on Signinlink")
 	public void user_clicks_on_signinlink() {
 		driver.get("https://dsportalapp.herokuapp.com/home");
+		
 		commonpage.dosignin();
 	}
 
 	@Then("user should navigate details page of Time Complexity to click on Tryhere editor")
 	public void user_should_navigate_details_page_of_time_complexity() throws InterruptedException {
-//		Thread.sleep(2000);
+	
 		dataStructurePage.tryEditor();
 	}
 
 	@Then("user should be able to enter {string}")
 	public void user_should_be_able_to_enter(String code) {
-
+		//dataStructurePage.pythoncode(text);
 		dataStructurePage.pythoncCodeForPositive(code, null, code, 0, 0);
 	
 	}
@@ -56,6 +59,11 @@ public class CommonStepDefination {
 	@Then("user clicks on run button")
 	public void user_clicks_on_run_button() throws InterruptedException {
 		dataStructurePage.run();
+	
+		driver.navigate().back();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0, -250)");
+
 	}
 
 	@Then("user should be able to enter {string} for negative testing")
@@ -65,9 +73,15 @@ public class CommonStepDefination {
 		
 
 	}
-	@Then("user clicks on signout button")
+	@When("user clicks on signout button")
 	public void user_clicks_on_signout_button() {
 		commonpage.signOut();
+		
 	}
+//	@Then("user gets loggedout message")
+//	public void user_gets_loggedout_message() {
+//		commonpage.loogedOutMsg();
+//		
+//	}
 
 }

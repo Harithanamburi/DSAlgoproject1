@@ -15,11 +15,11 @@ public class CommonPage {
 	private DSHomepage home = new DSHomepage(driver);
 	private DataStructurePage editor= new DataStructurePage(driver);
 	private Treepage tree= new Treepage(driver);
-	
 	private By signOut=By.xpath("//a[text()='Sign out']");
+	//private By loogedOutMsg=By.xpath("//div[@role='alert']");
 
 	public CommonPage(WebDriver driver) {
-		this.driver = driver;
+		//this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
@@ -37,16 +37,12 @@ public class CommonPage {
 		signin.logInButton();
 		signin.successMsg();
 	}
-	
 	public void signOut() {
 		driver.findElement(signOut).click();
 	}
-//	public void pythonCode() throws InterruptedException {
-//	
-//		editor.pythoncCodeForPositive(null, null, null, 0, 0);
-//	editor.pythoncCodeFornegative(null, null, null, 0, 0);
+//	public void loogedOutMsg() {
+//		driver.findElement(loogedOutMsg).getText();
 //	}
-//	
 	
 	
 

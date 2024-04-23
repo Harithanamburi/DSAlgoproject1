@@ -29,7 +29,7 @@ public class Treepage {
 	public WebDriver driver = Driverfactory.getDriver();
 
 	public Treepage(WebDriver driver) {
-		this.driver = driver;
+		//this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
@@ -94,6 +94,7 @@ public class Treepage {
 
 			treeLinks1.get(i).click();
 			driver.findElement(trybutton).click();
+			Thread.sleep(1500);
 			driver.findElement(editor).sendKeys(dataStructurePage.pythoncCodeFornegative(null, null, null, 2, 0));
 			driver.findElement(runbutton).click();
 			driver.switchTo().alert().accept();

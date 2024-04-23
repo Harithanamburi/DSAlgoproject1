@@ -5,15 +5,16 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-public class Configreader {
+public class ConfigReader {
 
-		private Properties prop;
+		public Properties prop;
+		static String browser ="";
 
 		public Properties init_prop() {
 
 			prop = new Properties();
 			try {
-				FileInputStream ip = new FileInputStream("/Users/muvva/eclipse-workspace/DSAlgoproject1/src/test/resources/Config.properties/configproperties");
+				FileInputStream ip = new FileInputStream("/Users/muvva/Desktop/new/DSAlgoproject1/src/test/resources/Config.properties/configproperties");
 				prop.load(ip);								
 			}
 			catch (FileNotFoundException e) {
@@ -26,6 +27,16 @@ public class Configreader {
 			return prop;
 
 		}
+
+		public static void setBrowserType(String newbrowser) {
+			browser = newbrowser;
+		}
+		
+		public static String getBrowser() {
+			return browser;
+		}
+
+
 
 	}
 	

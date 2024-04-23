@@ -12,25 +12,27 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 	public  class Driverfactory {
 		
-		public static WebDriver driver;
+		public static  WebDriver driver;
 
-		public static ThreadLocal<WebDriver> tldriver = new ThreadLocal<>();
+		public static  ThreadLocal<WebDriver> tldriver = new ThreadLocal<>();
 
 		public WebDriver init_driver(String browser) {
 
 			System.out.println("browser value is: " + browser);
+			
+			//browser = "chrome";
 
-			if (browser.equals("chrome")) {
-				ChromeOptions cr = new ChromeOptions();
-				cr.addArguments("disable-dev-shm-usage");
+			if (browser.equalsIgnoreCase("chrome")) {
+			ChromeOptions cr = new ChromeOptions();
+			cr.addArguments("disable-dev-shm-usage");
 				WebDriverManager.chromedriver().setup();
-				tldriver.set(new ChromeDriver(cr));
+				tldriver.set(new ChromeDriver());
 			}
-			else if (browser.equals("firefox")) {
+			else if (browser.equalsIgnoreCase("firefox")) {
 				WebDriverManager.firefoxdriver().setup();
 				tldriver.set(new FirefoxDriver());
 			} 
-			else if (browser.equals("edge")) {
+			else if (browser.equalsIgnoreCase("edge")) {
 				tldriver.set(new EdgeDriver());
 			} 
 			else {
@@ -40,15 +42,22 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 			getDriver().manage().deleteAllCookies();
 			getDriver().manage().window().maximize();
 			return getDriver();
+			
+			//return tldriver;
 
 		}
 
 		public static synchronized WebDriver getDriver() {
-			return tldriver.get();
+			
+				return tldriver.get();
+			
+			
 		}
-	   /* public static synchronized void setDriver(WebDriver driver) {
-	        tldriver.set(driver);
-	    }*/
+	   public static synchronized void setDriver(WebDriver driver) {
+	       
+				tldriver.set(driver);
+			
+	    }
 
 		
 
