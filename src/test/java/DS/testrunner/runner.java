@@ -13,6 +13,6 @@ import io.cucumber.junit.CucumberOptions;
 		monochrome=true,
 		plugin = {"pretty","html:htmlreports/target.html"}
 	)			
-public class Runner {
+public class runner {
 
 }
