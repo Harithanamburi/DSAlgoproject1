@@ -14,7 +14,9 @@ public class ConfigReader {
 
 			prop = new Properties();
 			try {
+
 				FileInputStream ip = new FileInputStream("/Users/muvva/Desktop/new/DSAlgoproject1/src/test/resources/Config.properties/configproperties");
+
 				prop.load(ip);								
 			}
 			catch (FileNotFoundException e) {
