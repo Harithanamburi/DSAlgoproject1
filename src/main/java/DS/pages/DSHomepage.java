@@ -10,7 +10,7 @@ public class DSHomepage {
 	public WebDriver driver = Driverfactory.getDriver();
 
 	public DSHomepage(WebDriver driver) {
-		this.driver = driver;
+		//this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 

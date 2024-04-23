@@ -29,6 +29,7 @@ public class Tree_stepdefination {
 	public void user_click_on_left_panel_links_in_tree_module_Invalid() throws InterruptedException {
 		//tree.treelinks();
 		//tree.treehomelinksValid();
+		Thread.sleep(1000);
 		tree.treehomelinksinvalid();
 
 	}

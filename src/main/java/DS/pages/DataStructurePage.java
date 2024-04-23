@@ -26,9 +26,11 @@ public class DataStructurePage {
 	public DataStructurePage(WebDriver webDriver) {
 		PageFactory.initElements(driver, this);
 	}
+
 	public void DataStructurePage1() {
 		driver.get("https://dsportalapp.herokuapp.com/home");
 	}
+
 //Locators//
 	By dataStructureButton = By.xpath("//a[@href='data-structures-introduction']");
 	By timeComplexityLink = By.xpath("//a[@href='time-complexity']");
@@ -36,8 +38,8 @@ public class DataStructurePage {
 	By tryEditor = By.xpath("//a[@href='/tryEditor']");
 	By pythoncode = By.xpath("//form[@id='answer_form']/div/div/div/textarea");
 	By run = By.xpath("//button[@type='button']");
-	By signOut=By.xpath("//a[text()='Sign out']");
-	
+	By signOut = By.xpath("//a[text()='Sign out']");
+
 //Element Actions//
 	public void dataStructureButton() {
 		driver.findElement(dataStructureButton).click();
@@ -55,22 +57,22 @@ public class DataStructurePage {
 
 		driver.findElement(tryEditor).click();
 	}
-public void pythoncode(String cellData) {
 
-	driver.findElement(pythoncode).sendKeys(cellData);
-}
-public void signoutbutton() {
-	driver.findElement(signOut).click();
-}
-	
+	public void pythoncode(String cellData) {
+
+		driver.findElement(pythoncode).sendKeys(cellData);
+	}
+
+
 	public String pythoncCodeForPositive(String filePath, WebElement pythoncode, String Excel_Login_Pythoncode,
 			int rowNum, int colNum) {
 
 		String cellData = " ";
 		try {
 			Workbook workbook = new XSSFWorkbook(
-					new File("C:/Users/radha/eclipse-workspace/DSAlgoproject1/Code/Excel_Login_Pythoncode.xlsx"));
-			ZipSecureFile.setMinInflateRatio(-1.0d);
+
+					new File("/Users/muvva/Desktop/new/DSAlgoproject1/Code/Excel_Login_Pythoncode_Arrays.xlsx"));
+
 			Sheet sheet = workbook.getSheet("pythonCode");
 			Row row = sheet.getRow(1);
 			Cell cell = row.getCell(0);
@@ -85,19 +87,18 @@ public void signoutbutton() {
 		} catch (Exception e) {
 
 		}
-		
-		
-	return cellData;
+		return cellData;
 	}
 
 	public String pythoncCodeFornegative(String filePath, WebElement pythoncodes, String Excel_Login_Pythoncode,
 			int rowNum, int colNum) throws InterruptedException {
 
-		//driver.navigate().refresh();
-
 		String cellData = " ";
 		try {
-			Workbook workbook = new XSSFWorkbook(new File("C:/Users/radha/eclipse-workspace/DSAlgoproject1/Code/Excel_Login_Pythoncode.xlsx"));
+
+			Workbook workbook = new XSSFWorkbook(
+					new File("/Users/muvva/Desktop/new/DSAlgoproject1/Code/Excel_Login_Pythoncode_Arrays.xlsx"));
+
 			Sheet sheet = workbook.getSheet("pythonCode");
 			Row row = sheet.getRow(2);
 			Cell cell = row.getCell(0);
@@ -111,12 +112,11 @@ public void signoutbutton() {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return cellData;
-		
+
 	}
 
-	
 	public void run() throws InterruptedException {
 
 		driver.findElement(run).click();
@@ -132,8 +132,7 @@ public void signoutbutton() {
 		} catch (Exception e) {
 
 		}
-		
 
 	}
-	
+
 }

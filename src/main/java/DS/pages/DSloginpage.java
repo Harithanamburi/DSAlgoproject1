@@ -16,7 +16,7 @@ public class DSloginpage {
 	public WebDriver driver = Driverfactory.getDriver();
 
 	public DSloginpage(WebDriver driver) {
-		this.driver = driver;
+		//this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
