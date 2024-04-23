@@ -1,3 +1,4 @@
+@Queue
 Feature: Queue
 
 Background: Queue login

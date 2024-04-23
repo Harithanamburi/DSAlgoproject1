@@ -108,6 +108,11 @@
     <version>2.17.1</version> <!-- Specify the version you want to use -->
 </dependency>
 
+<dependency>
+    <groupId>tech.grasshopper</groupId>
+    <artifactId>extentreports-cucumber7-adapter</artifactId>
+    <version>1.14.0</version>
+</dependency>
 
 
 

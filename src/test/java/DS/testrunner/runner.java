@@ -11,7 +11,10 @@ import io.cucumber.junit.CucumberOptions;
 		glue ={"DS.stepdefination", "DS.hooks"},
 		dryRun=false,
 		monochrome=true,
-		plugin = {"pretty","html:htmlreports/target.html"}
+		plugin = {"pretty","html:htmlreports/target.html",
+				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+		
+		}
 	)			
 public class runner {
 
