@@ -24,7 +24,7 @@ public class Arrayspage {
 	public WebDriver driver = Driverfactory.getDriver();
 
 	public Arrayspage(WebDriver driver) {
-		// this.driver = driver;
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
