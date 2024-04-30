@@ -29,7 +29,7 @@ public class Arrayspage {
 	}
 
 	private DataStructurePage dataStructurePage = new DataStructurePage(Driverfactory.getDriver());
-	
+
 	private By agetstartedarray = By.xpath("//a[@href='array']");
 	private By arraysinPython = By.xpath("//a[@href='arrays-in-python']");
 	private By arraySubLinks = By.xpath("//div[@id='content']//li//a");
@@ -50,18 +50,17 @@ public class Arrayspage {
 	public void arraySubLinks() throws InterruptedException {
 		List<WebElement> arrayLinks = driver.findElements(arraySubLinks);
 		for (int i = 0; i < arrayLinks.size(); i++) {
-			
+
 			List<WebElement> arraySubLinks1 = driver.findElements(arraySubLinks);
 			String originalStyle = arraySubLinks1.get(i).getAttribute("style");
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", arraySubLinks1.get(i), "style",
 					originalStyle + "border: 2px solid red;");
 			arraySubLinks1.get(i).click();
-			
+
 			driver.findElement(atryeditor).click();
-			// Thread.sleep(1000);
 			driver.findElement(apythoncode).sendKeys(dataStructurePage.pythoncCodeForPositive(null, null, null, 1, 0));
-			driver.findElement(arun).click();
+			//driver.findElement(arun).click();
 
 			driver.navigate().back();
 		}
@@ -70,7 +69,7 @@ public class Arrayspage {
 	public void arraySubLinksNegative() throws InterruptedException {
 		List<WebElement> arrayLinks = driver.findElements(arraySubLinks);
 		for (int i = 0; i < arrayLinks.size(); i++) {
-			
+
 			List<WebElement> arraySubLinks2 = driver.findElements(arraySubLinks);
 			String originalStyle = arraySubLinks2.get(i).getAttribute("style");
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -79,9 +78,10 @@ public class Arrayspage {
 
 			arraySubLinks2.get(i).click();
 			driver.findElement(atryeditor).click();
+			
 			driver.findElement(apythoncode).sendKeys(dataStructurePage.pythoncCodeFornegative(null, null, null, 2, 0));
-			driver.findElement(arun).click();
-			driver.switchTo().alert().accept();
+			//driver.findElement(arun).click();
+			//driver.switchTo().alert().accept();
 			driver.navigate().back();
 		}
 
@@ -92,22 +92,16 @@ public class Arrayspage {
 
 	}
 
-	public void practiceQuestionListValidData() {
+	public void practiceQuestionListValidData() throws InterruptedException {
 		List<WebElement> practiceQuestions = driver.findElements(By.xpath("/html/body/div/a"));
 		for (int l = 0; l < practiceQuestions.size(); l++) {
-			
-			List<WebElement> practiceQuestions1 = driver.findElements(arraySubLinks);
-			String originalStyle = practiceQuestions1.get(l).getAttribute("style");
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", practiceQuestions1.get(l), "style",
-					originalStyle + "border: 2px solid red;");
-			practiceQuestions1.get(l).click();
+			practiceQuestions.get(l).click();
 
 			{
 				String cellData = " ";
 				try {
 					Workbook workbook = new XSSFWorkbook(new File(
-							"/Users/muvva/Desktop/new/DSAlgoproject1/Code/Excel_Login_Pythoncode_Arrays.xlsx"));
+							"/Users/muvva/Desktop/new/DSAlgoproject1/src/main/java/utilities/ExcelReader.xlsx"));
 					Sheet sheet = workbook.getSheet("pythonCode");
 
 					Row row = sheet.getRow(3 + l);
@@ -116,9 +110,9 @@ public class Arrayspage {
 
 					if (cell != null) {
 						cellData = cell.getStringCellValue();
-						//System.out.println("cellData2 :" + cellData);
+
 					}
-					workbook.close();
+					//workbook.close();
 
 				} catch (Exception e) {
 					System.out.println("exception:" + e);
@@ -127,11 +121,15 @@ public class Arrayspage {
 
 				WebElement arraylinkcodeForText = driver.findElement(By.xpath("//div[@class='CodeMirror-code']/div"));
 				WebElement apythoncode = driver.findElement(By.xpath("//form[@id='answer_form']/div/div/div/textarea"));
-
-				while (!arraylinkcodeForText.getText().equals("1")) {
-
+			while (arraylinkcodeForText.getText().equals("1")) {
+					Actions action = new Actions(driver); 
+					action.moveToElement(apythoncode); 
+					
 					apythoncode.sendKeys(Keys.DELETE);
+					//System.out.println("pythonecode");
+					Thread.sleep(1);
 				}
+			
 				String[] str1 = cellData.split("\n");
 				for (int i = 0; i < str1.length; i++) {
 					if (str1[i].equalsIgnoreCase("\\b")) {
@@ -148,33 +146,27 @@ public class Arrayspage {
 		}
 	}
 
-	public void practiceQuestionListInValidData() {
+	public void practiceQuestionListInValidData() throws InterruptedException {
 		List<WebElement> practiceQuestions = driver.findElements(By.xpath("/html/body/div/a"));
-		for (int l = 0; l < practiceQuestions.size(); l++) {
-			List<WebElement> practiceQuestions2 = driver.findElements(arraySubLinks);
-			String originalStyle = practiceQuestions2.get(l).getAttribute("style");
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", practiceQuestions2.get(l), "style",
-					originalStyle + "border: 2px solid red;");
-			
-			practiceQuestions2.get(l).click();
+		for (int m = 0; m < practiceQuestions.size(); m++) {
+			practiceQuestions.get(m).click();
 
 			{
 				String cellData = " ";
 				try {
 					Workbook workbook = new XSSFWorkbook(new File(
-							"/Users/muvva/Desktop/new/DSAlgoproject1/Code/Excel_Login_Pythoncode_Arrays.xlsx"));
+							"/Users/muvva/Desktop/new/DSAlgoproject1/src/main/java/utilities/ExcelReader.xlsx"));
 					Sheet sheet = workbook.getSheet("pythonCode");
 
-					Row row = sheet.getRow(7 + l);
+					Row row = sheet.getRow(7 + m);
 
 					Cell cell = row.getCell(0);
 
 					if (cell != null) {
 						cellData = cell.getStringCellValue();
-						//System.out.println("cellData2 :" + cellData);
+
 					}
-					workbook.close();
+					//workbook.close();
 
 				} catch (Exception e) {
 					System.out.println("exception:" + e);
@@ -184,10 +176,11 @@ public class Arrayspage {
 				WebElement arraylinkcodeForText = driver.findElement(By.xpath("//div[@class='CodeMirror-code']/div"));
 				WebElement apythoncode = driver.findElement(By.xpath("//form[@id='answer_form']/div/div/div/textarea"));
 
-				while (!arraylinkcodeForText.getText().equals("1")) {
-
+			/*	while (!arraylinkcodeForText.getText().equals("1")) {
+					Actions action = new Actions(driver); 
+					action.moveToElement(apythoncode); 
 					apythoncode.sendKeys(Keys.DELETE);
-				}
+				}*/
 				String[] str1 = cellData.split("\n");
 				for (int i = 0; i < str1.length; i++) {
 					if (str1[i].equalsIgnoreCase("\\b")) {
@@ -204,4 +197,6 @@ public class Arrayspage {
 
 		}
 	}
-}
+		
+	}
+

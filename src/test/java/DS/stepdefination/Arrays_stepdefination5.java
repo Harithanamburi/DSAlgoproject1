@@ -11,13 +11,13 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Arrays_stepdefination {
+public class Arrays_stepdefination5 {
 	private WebDriver driver = Driverfactory.getDriver();
 
 	private Arrayspage array;
 	private CommonPage commonpage;
 
-	public Arrays_stepdefination() {
+	public Arrays_stepdefination5() {
 		array = new Arrayspage(Driverfactory.getDriver());
 		commonpage = new CommonPage(driver);
 	}
@@ -42,18 +42,26 @@ public class Arrays_stepdefination {
 
 	@Then("user click on left panel links in Array module for Invalid data")
 	public void user_click_on_left_panel_links_in_Array_module_for_Invalid_data() throws InterruptedException {
-Thread.sleep(1000);
+       
 		array.arraySubLinksNegative();
 	}
 	@Then("user clicks on practice questions")
 	public void user_clicks_on_practice_questions() throws InterruptedException {
+		
 		array.practiceQuestions();
 
 	}
 
 	@Then("user should be able to enter the code")
-	public void user_should_be_able_to_enter_the_code() {
+	public void user_should_be_able_to_enter_the_code() throws InterruptedException {
+		
 		array.practiceQuestionListValidData();
+		
+
+	}
+	@Then("user should be able to enter the  Inavalid code")
+	public void user_should_be_able_to_enter_the_inavalid_code() throws InterruptedException{
+		
 		array.practiceQuestionListInValidData();
 
 	}

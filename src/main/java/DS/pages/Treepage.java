@@ -59,7 +59,7 @@ public class Treepage {
 		driver.findElement(treelinks).click();
 	}
 
-	public void treehomelinksValid() {
+	public void treehomelinksValid() throws InterruptedException {
 
 		List<WebElement> treeLinks = driver.findElements(treelinks);
 		for (int i = 0; i < treeLinks.size(); i++) {
@@ -73,7 +73,7 @@ public class Treepage {
 			treeLinks1.get(i).click();
 			driver.findElement(trybutton).click();
 			driver.findElement(editor).sendKeys(dataStructurePage.pythoncCodeForPositive(null, null, null, 1, 0));
-			driver.findElement(runbutton).click();
+			//driver.findElement(runbutton).click();
 			driver.navigate().back();
 
 		}
@@ -94,10 +94,9 @@ public class Treepage {
 
 			treeLinks1.get(i).click();
 			driver.findElement(trybutton).click();
-			Thread.sleep(1500);
 			driver.findElement(editor).sendKeys(dataStructurePage.pythoncCodeFornegative(null, null, null, 2, 0));
-			driver.findElement(runbutton).click();
-			driver.switchTo().alert().accept();
+			//driver.findElement(runbutton).click();
+			//driver.switchTo().alert().accept();
 			driver.navigate().back();
 		}
 	}

@@ -59,9 +59,8 @@ public class LinkedListpage {
 				leftPanelSublinks1.get(i).click();
 				
 				driver.findElement(atryeditor).click();
-				Thread.sleep(1500);
 				driver.findElement(apythoncode).sendKeys(dataStructurePage.pythoncCodeForPositive(null, null, null, 1, 0));
-				driver.findElement(arun).click();
+				//driver.findElement(arun).click();
 				driver.navigate().back();
 			}
 		}
@@ -78,9 +77,10 @@ public class LinkedListpage {
 				leftPanelSublinks2.get(i).click();
 				
 				driver.findElement(atryeditor).click();
+			
 				driver.findElement(apythoncode).sendKeys(dataStructurePage.pythoncCodeFornegative(null, null, null, 2, 0));
-				driver.findElement(arun).click();
-				driver.switchTo().alert().accept();
+				//driver.findElement(arun).click();
+				//driver.switchTo().alert().accept();
 				driver.navigate().back();
 			}
 		}

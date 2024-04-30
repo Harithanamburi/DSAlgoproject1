@@ -10,14 +10,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Registration_stepdefination {
+public class Registration_stepdefination11 {
 
 	private WebDriver driver;
 	private registrationpage register = new registrationpage(Driverfactory.getDriver());
 //====Validation with valid data=====//
 	@Then("user clicks the register link")
 	public void user_clicks_the_reister_link() throws InterruptedException {
-		Thread.sleep(2000);
+		
 		register.registerLink();
 	}
 

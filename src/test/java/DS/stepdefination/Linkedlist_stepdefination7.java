@@ -9,14 +9,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Linkedlist_stepdefination {
+public class Linkedlist_stepdefination7 {
 
 	private WebDriver driver = Driverfactory.getDriver();
 
 	private LinkedListpage linkedlist;
 	private CommonPage commonpage;
 
-	public Linkedlist_stepdefination() {
+	public Linkedlist_stepdefination7() {
 		
 		linkedlist = new LinkedListpage(Driverfactory.getDriver());
 		commonpage = new CommonPage(driver);

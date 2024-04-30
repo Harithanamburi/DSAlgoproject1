@@ -15,7 +15,7 @@ Given User is on DSAlgoHome Page
    When user clicks on signout button
    
    
-   Scenario Outline: Data Structure Validation
+   Scenario Outline: Data Structure Validation for Validdata
   
    When user clicks on Get started button under Data structures
    Then user should navigate details page to click on Time Complexity link

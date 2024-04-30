@@ -1,11 +1,8 @@
 package DS.testrunner;
 
 //import org.junit.runner.RunWith;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterTest;
+
+
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Optional;
@@ -19,22 +16,24 @@ import utilities.ConfigReader;
 
 //@RunWith(Cucumber.class)
 @CucumberOptions(
-		features={"src/test/resources/featurefile"},
+		features={"src/test/resources/featurefile/arrays.feature"},
+		//tags="@Arrays",
 		glue ={"DS.stepdefination", "DS.hooks","featurefile"},
 		dryRun=false,
 		monochrome=true,
-		plugin = {"pretty","html:htmlreports/target.html"}
+		plugin = {"pretty","html:htmlreports/target.html","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
 	)			
-public class Runner extends AbstractTestNGCucumberTests {
+public class runner extends AbstractTestNGCucumberTests {
 	@BeforeTest
-	@Parameters("browser")
+	@Parameters({"browser"})
 	public void defineBrowser(@Optional ("chrome")String  browser) throws Exception {
 		ConfigReader.setBrowserType(browser);
 		System.out.println("browser: " +browser);
 	
 }
 	@Override
-	@DataProvider(parallel=false)
+	@DataProvider(parallel=true)
 	public Object[][] scenarios(){
 		return super.scenarios();
 	}

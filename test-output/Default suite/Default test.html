@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>20/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Apr 22 18:00:12 CDT 2024</td>
+<td>Started on:</td><td>Tue Apr 30 12:18:48 CDT 2024</td>
 </tr>
-<tr><td>Total time:</td><td>450 seconds (450727 ms)</td>
+<tr><td>Total time:</td><td>76 seconds (76567 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,162 +76,141 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='DS.testrunner.Runner.runScenario()'><b>runScenario</b><br>Test class: DS.testrunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Practice uestions", "Arrays"</td>
-<td><div><pre>java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-	at java.base/java.util.Objects.checkIndex(Objects.java:361)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at DS.pages.Arrayspage.practiceQuestionListValidData(Arrayspage.java:97)
-	at DS.stepdefination.Arrays_stepdefination.user_should_be_able_to_enter_the_code(Arrays_stepdefination.java:56)
+<td title='DS.testrunner.runner.runScenario()'><b>runScenario</b><br>Test class: DS.testrunner.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Arrays Module Invaliddata", "Arrays"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //div[contains(@class,&apos;CodeMirror&apos;)]//textarea
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.18.0&apos;, revision: &apos;b6bf9de7cc*&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.4.1&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at DS.pages.Arrayspage.arraySubLinksNegative(Arrayspage.java:82)
+	at DS.stepdefination.Arrays_stepdefination5.user_click_on_left_panel_links_in_Array_module_for_Invalid_data(Arrays_stepdefination5.java:46)
+	at ✽.user click on left panel links in Array module for Invalid data(file:///Users/muvva/Desktop/new/DSAlgoproject1/src/test/resources/featurefile/arrays.feature:16)
+</pre></div><a href='#' onClick='toggleBox("stack-trace377867632", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace377867632'><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //div[contains(@class,&apos;CodeMirror&apos;)]//textarea
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.18.0&apos;, revision: &apos;b6bf9de7cc*&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.4.1&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at DS.pages.Arrayspage.arraySubLinksNegative(Arrayspage.java:82)
+	at DS.stepdefination.Arrays_stepdefination5.user_click_on_left_panel_links_in_Array_module_for_Invalid_data(Arrays_stepdefination5.java:46)
+	at ✽.user click on left panel links in Array module for Invalid data(file:///Users/muvva/Desktop/new/DSAlgoproject1/src/test/resources/featurefile/arrays.feature:16)
+</pre></div></td>
+<td>39</td>
+<td>DS.testrunner.runner@23d1e5d0</td></tr>
+<tr>
+<td title='DS.testrunner.runner.runScenario()'><b>runScenario</b><br>Test class: DS.testrunner.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Arrays Module Validdata", "Arrays"</td>
+<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.91)
+Build info: version: &apos;4.18.0&apos;, revision: &apos;b6bf9de7cc*&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.4.1&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [024c6f2e14c8593ae6877b72e6de818d, sendKeysToElement {value=[Ljava.lang.CharSequence;@444ad6f4, id=f.C49090A0742DE91029D534E661853608.d.8542FE680E2CB56CDE297F45C41CC39F.e.57}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.91, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: /var/folders/r5/mcc3cg2n7w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51108}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51108/devtoo..., se:cdpVersion: 124.0.6367.91, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (024c6f2e14c8593ae6877b72e6de818d)] -&gt; xpath: //div[contains(@class,&apos;CodeMirror&apos;)]//textarea]
+Session ID: 024c6f2e14c8593ae6877b72e6de818d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at DS.pages.Arrayspage.arraySubLinks(Arrayspage.java:62)
+	at DS.stepdefination.Arrays_stepdefination5.user_click_on_left_panel_links_in_Array_module(Arrays_stepdefination5.java:39)
+	at ✽.user click on left panel links in Array module(file:///Users/muvva/Desktop/new/DSAlgoproject1/src/test/resources/featurefile/arrays.feature:11)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1730875900", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1730875900'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.91)
+Build info: version: &apos;4.18.0&apos;, revision: &apos;b6bf9de7cc*&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.4.1&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [024c6f2e14c8593ae6877b72e6de818d, sendKeysToElement {value=[Ljava.lang.CharSequence;@444ad6f4, id=f.C49090A0742DE91029D534E661853608.d.8542FE680E2CB56CDE297F45C41CC39F.e.57}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.91, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: /var/folders/r5/mcc3cg2n7w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51108}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51108/devtoo..., se:cdpVersion: 124.0.6367.91, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (024c6f2e14c8593ae6877b72e6de818d)] -&gt; xpath: //div[contains(@class,&apos;CodeMirror&apos;)]//textarea]
+Session ID: 024c6f2e14c8593ae6877b72e6de818d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at DS.pages.Arrayspage.arraySubLinks(Arrayspage.java:62)
+	at DS.stepdefination.Arrays_stepdefination5.user_click_on_left_panel_links_in_Array_module(Arrays_stepdefination5.java:39)
+	at ✽.user click on left panel links in Array module(file:///Users/muvva/Desktop/new/DSAlgoproject1/src/test/resources/featurefile/arrays.feature:11)
+</pre></div></td>
+<td>44</td>
+<td>DS.testrunner.runner@23d1e5d0</td></tr>
+<tr>
+<td title='DS.testrunner.runner.runScenario()'><b>runScenario</b><br>Test class: DS.testrunner.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Practice Questions for valid data", "Arrays"</td>
+<td><div><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : SyntaxError: bad input on line 8}
+  (Session info: chrome=124.0.6367.91): SyntaxError: bad input on line 8
+Build info: version: &apos;4.18.0&apos;, revision: &apos;b6bf9de7cc*&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.4.1&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [606f8f05e4d844adeb17038588ed6fc9, goBack {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.91, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: /var/folders/r5/mcc3cg2n7w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51109}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51109/devtoo..., se:cdpVersion: 124.0.6367.91, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 606f8f05e4d844adeb17038588ed6fc9
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:136)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:592)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.back(RemoteWebDriver.java:1054)
+	at DS.pages.Arrayspage.practiceQuestionListValidData(Arrayspage.java:144)
+	at DS.stepdefination.Arrays_stepdefination5.user_should_be_able_to_enter_the_code(Arrays_stepdefination5.java:58)
 	at ✽.user should be able to enter the code(file:///Users/muvva/Desktop/new/DSAlgoproject1/src/test/resources/featurefile/arrays.feature:22)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1424575977", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1424575977'><pre>java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-	at java.base/java.util.Objects.checkIndex(Objects.java:361)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at DS.pages.Arrayspage.practiceQuestionListValidData(Arrayspage.java:97)
-	at DS.stepdefination.Arrays_stepdefination.user_should_be_able_to_enter_the_code(Arrays_stepdefination.java:56)
+</pre></div><a href='#' onClick='toggleBox("stack-trace887328973", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace887328973'><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : SyntaxError: bad input on line 8}
+  (Session info: chrome=124.0.6367.91): SyntaxError: bad input on line 8
+Build info: version: &apos;4.18.0&apos;, revision: &apos;b6bf9de7cc*&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.4.1&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [606f8f05e4d844adeb17038588ed6fc9, goBack {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.91, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: /var/folders/r5/mcc3cg2n7w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51109}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51109/devtoo..., se:cdpVersion: 124.0.6367.91, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 606f8f05e4d844adeb17038588ed6fc9
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:136)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:592)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.back(RemoteWebDriver.java:1054)
+	at DS.pages.Arrayspage.practiceQuestionListValidData(Arrayspage.java:144)
+	at DS.stepdefination.Arrays_stepdefination5.user_should_be_able_to_enter_the_code(Arrays_stepdefination5.java:58)
 	at ✽.user should be able to enter the code(file:///Users/muvva/Desktop/new/DSAlgoproject1/src/test/resources/featurefile/arrays.feature:22)
 </pre></div></td>
-<td>13</td>
-<td>DS.testrunner.Runner@4167d97b</td></tr>
-<tr>
-<td title='DS.testrunner.Runner.runScenario()'><b>runScenario</b><br>Test class: DS.testrunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Practice questions", "Arrays Practice questions"</td>
-<td><div><pre>java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-	at java.base/java.util.Objects.checkIndex(Objects.java:361)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at DS.pages.Arrayspage.practiceQuestionListValidData(Arrayspage.java:97)
-	at DS.stepdefination.Arrays_stepdefination.user_should_be_able_to_enter_the_code(Arrays_stepdefination.java:56)
-	at ✽.user should be able to enter the code(file:///Users/muvva/Desktop/new/DSAlgoproject1/src/test/resources/featurefile/practiceQuestions.feature:8)
-</pre></div><a href='#' onClick='toggleBox("stack-trace45081187", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace45081187'><pre>java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-	at java.base/java.util.Objects.checkIndex(Objects.java:361)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at DS.pages.Arrayspage.practiceQuestionListValidData(Arrayspage.java:97)
-	at DS.stepdefination.Arrays_stepdefination.user_should_be_able_to_enter_the_code(Arrays_stepdefination.java:56)
-	at ✽.user should be able to enter the code(file:///Users/muvva/Desktop/new/DSAlgoproject1/src/test/resources/featurefile/practiceQuestions.feature:8)
-</pre></div></td>
-<td>10</td>
-<td>DS.testrunner.Runner@4167d97b</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='DS.testrunner.Runner.runScenario()'><b>runScenario</b><br>Test class: DS.testrunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "open Registration page for negative cases", "Registartion page"</td>
-<td></td>
-<td>11</td>
-<td>DS.testrunner.Runner@4167d97b</td></tr>
-<tr>
-<td title='DS.testrunner.Runner.runScenario()'><b>runScenario</b><br>Test class: DS.testrunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "open Registration page for negative cases", "Registartion page"</td>
-<td></td>
-<td>11</td>
-<td>DS.testrunner.Runner@4167d97b</td></tr>
-<tr>
-<td title='DS.testrunner.Runner.runScenario()'><b>runScenario</b><br>Test class: DS.testrunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Data Structure Validation", "Data Structure Intruduction"</td>
-<td></td>
-<td>26</td>
-<td>DS.testrunner.Runner@4167d97b</td></tr>
-<tr>
-<td title='DS.testrunner.Runner.runScenario()'><b>runScenario</b><br>Test class: DS.testrunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tree Valid data", "Tree module"</td>
-<td></td>
-<td>35</td>
-<td>DS.testrunner.Runner@4167d97b</td></tr>
-<tr>
-<td title='DS.testrunner.Runner.runScenario()'><b>runScenario</b><br>Test class: DS.testrunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Arrays Module Invaliddata", "Arrays"</td>
-<td></td>
-<td>28</td>
-<td>DS.testrunner.Runner@4167d97b</td></tr>
-<tr>
-<td title='DS.testrunner.Runner.runScenario()'><b>runScenario</b><br>Test class: DS.testrunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "open Registration page for negative cases", "Registartion page"</td>
-<td></td>
-<td>12</td>
-<td>DS.testrunner.Runner@4167d97b</td></tr>
-<tr>
-<td title='DS.testrunner.Runner.runScenario()'><b>runScenario</b><br>Test class: DS.testrunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tree Invalid data", "Tree module"</td>
-<td></td>
-<td>57</td>
-<td>DS.testrunner.Runner@4167d97b</td></tr>
-<tr>
-<td title='DS.testrunner.Runner.runScenario()'><b>runScenario</b><br>Test class: DS.testrunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Data Structure Validation for Invalidadata", "Data Structure Intruduction"</td>
-<td></td>
-<td>26</td>
-<td>DS.testrunner.Runner@4167d97b</td></tr>
-<tr>
-<td title='DS.testrunner.Runner.runScenario()'><b>runScenario</b><br>Test class: DS.testrunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Graph InValid Data", "Graph"</td>
-<td></td>
-<td>24</td>
-<td>DS.testrunner.Runner@4167d97b</td></tr>
-<tr>
-<td title='DS.testrunner.Runner.runScenario()'><b>runScenario</b><br>Test class: DS.testrunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "LinkedList InValid Data", "LinkedList"</td>
-<td></td>
-<td>25</td>
-<td>DS.testrunner.Runner@4167d97b</td></tr>
-<tr>
-<td title='DS.testrunner.Runner.runScenario()'><b>runScenario</b><br>Test class: DS.testrunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "LinkedList Valid Data", "LinkedList"</td>
-<td></td>
-<td>36</td>
-<td>DS.testrunner.Runner@4167d97b</td></tr>
-<tr>
-<td title='DS.testrunner.Runner.runScenario()'><b>runScenario</b><br>Test class: DS.testrunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "open Registration page", "Registartion page"</td>
-<td></td>
-<td>11</td>
-<td>DS.testrunner.Runner@4167d97b</td></tr>
-<tr>
-<td title='DS.testrunner.Runner.runScenario()'><b>runScenario</b><br>Test class: DS.testrunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Arrays Module", "Arrays"</td>
-<td></td>
-<td>32</td>
-<td>DS.testrunner.Runner@4167d97b</td></tr>
-<tr>
-<td title='DS.testrunner.Runner.runScenario()'><b>runScenario</b><br>Test class: DS.testrunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Graph Valid Data", "Graph"</td>
-<td></td>
-<td>27</td>
-<td>DS.testrunner.Runner@4167d97b</td></tr>
-<tr>
-<td title='DS.testrunner.Runner.runScenario()'><b>runScenario</b><br>Test class: DS.testrunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login Validation for Invalid Data", "Login Page"</td>
-<td></td>
-<td>9</td>
-<td>DS.testrunner.Runner@4167d97b</td></tr>
-<tr>
-<td title='DS.testrunner.Runner.runScenario()'><b>runScenario</b><br>Test class: DS.testrunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Homepage Validation", "Homepage"</td>
-<td></td>
-<td>7</td>
-<td>DS.testrunner.Runner@4167d97b</td></tr>
-<tr>
-<td title='DS.testrunner.Runner.runScenario()'><b>runScenario</b><br>Test class: DS.testrunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login Validation", "Login Page"</td>
-<td></td>
-<td>10</td>
-<td>DS.testrunner.Runner@4167d97b</td></tr>
-<tr>
-<td title='DS.testrunner.Runner.runScenario()'><b>runScenario</b><br>Test class: DS.testrunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login Validation for Invalid Data", "Login Page"</td>
-<td></td>
-<td>9</td>
-<td>DS.testrunner.Runner@4167d97b</td></tr>
-<tr>
-<td title='DS.testrunner.Runner.runScenario()'><b>runScenario</b><br>Test class: DS.testrunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "open Registration page for negative cases", "Registartion page"</td>
-<td></td>
-<td>12</td>
-<td>DS.testrunner.Runner@4167d97b</td></tr>
-<tr>
-<td title='DS.testrunner.Runner.runScenario()'><b>runScenario</b><br>Test class: DS.testrunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login Validation for Invalid Data", "Login Page"</td>
-<td></td>
-<td>9</td>
-<td>DS.testrunner.Runner@4167d97b</td></tr>
+<td>61</td>
+<td>DS.testrunner.runner@23d1e5d0</td></tr>
 </table><p>
 </body>
 </html>

@@ -64,14 +64,14 @@ public class DataStructurePage {
 	}
 
 
-	public String pythoncCodeForPositive(String filePath, WebElement pythoncode, String Excel_Login_Pythoncode,
+	public String pythoncCodeForPositive(String filePath, WebElement pythoncode, String ExcelReader,
 			int rowNum, int colNum) {
 
 		String cellData = " ";
 		try {
 			Workbook workbook = new XSSFWorkbook(
 
-					new File("/Users/muvva/Desktop/new/DSAlgoproject1/Code/Excel_Login_Pythoncode_Arrays.xlsx"));
+					new File("/Users/muvva/Desktop/new/DSAlgoproject1/src/main/java/utilities/ExcelReader.xlsx"));
 
 			Sheet sheet = workbook.getSheet("pythonCode");
 			Row row = sheet.getRow(1);
@@ -82,7 +82,7 @@ public class DataStructurePage {
 				System.out.println("cellData :" + cellData);
 			}
 
-			workbook.close();
+			//workbook.close();
 
 		} catch (Exception e) {
 
@@ -90,14 +90,14 @@ public class DataStructurePage {
 		return cellData;
 	}
 
-	public String pythoncCodeFornegative(String filePath, WebElement pythoncodes, String Excel_Login_Pythoncode,
+	public String pythoncCodeFornegative(String filePath, WebElement pythoncode, String ExcelReader,
 			int rowNum, int colNum) throws InterruptedException {
 
 		String cellData = " ";
 		try {
 
 			Workbook workbook = new XSSFWorkbook(
-					new File("/Users/muvva/Desktop/new/DSAlgoproject1/Code/Excel_Login_Pythoncode_Arrays.xlsx"));
+					new File("/Users/muvva/Desktop/new/DSAlgoproject1/src/main/java/utilities/ExcelReader.xlsx"));
 
 			Sheet sheet = workbook.getSheet("pythonCode");
 			Row row = sheet.getRow(2);
@@ -107,7 +107,7 @@ public class DataStructurePage {
 				cellData = cell.getStringCellValue();
 				System.out.println("cellData :" + cellData);
 			}
-			workbook.close();
+			//workbook.close();
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -121,13 +121,13 @@ public class DataStructurePage {
 
 		driver.findElement(run).click();
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 			if (wait.until(ExpectedConditions.alertIsPresent()) == null)
 				System.out.println("alert was not present");
 			else
 				System.out.println("alert was present");
-			Alert alert = driver.switchTo().alert();
-			alert.accept();
+			driver.switchTo().alert().accept();
+			
 
 		} catch (Exception e) {
 

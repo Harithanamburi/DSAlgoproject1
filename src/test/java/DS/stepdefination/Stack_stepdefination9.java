@@ -9,7 +9,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Stack_stepdefination {
+public class Stack_stepdefination9 {
 	
 	private WebDriver driver;
 	private Stackpage stack = new Stackpage(Driverfactory.getDriver());
@@ -32,7 +32,7 @@ public class Stack_stepdefination {
 	@Then("click on Try here tab")
 	public void click_on_try_here_tab() throws InterruptedException {
 		stack.tryHereButton();
-		//Thread.sleep(3000);
+		
 	}
 	@Then("user enter the valid python code \"print \"hello\"\"")
 	public void user_enter_the_valid_python_code_print_hello() throws InterruptedException {

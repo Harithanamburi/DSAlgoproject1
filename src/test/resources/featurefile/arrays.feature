@@ -7,7 +7,7 @@
    Then Click on Array Get started button
    When user click on Arrays in Python button in Array module
    
-  Scenario:  Arrays Module
+  Scenario:  Arrays Module Validdata
    Then user click on left panel links in Array module
    When user clicks on signout button
    
@@ -17,9 +17,14 @@
    When user clicks on signout button
    
    
-  Scenario:  Practice uestions
+  Scenario:  Practice Questions for valid data
    Then user clicks on practice questions
    Then user should be able to enter the code 
+   When user clicks on signout button
+   
+   Scenario:  Practice Questions for Invalid data
+   Then user clicks on practice questions
+   Then user should be able to enter the  Inavalid code 
    When user clicks on signout button
  
  

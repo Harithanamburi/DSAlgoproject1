@@ -9,14 +9,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Graph_stepdefination {
+public class Graph_stepdefination6 {
 	
 		private WebDriver driver = Driverfactory.getDriver();
 
 		private GraphsPage graphspage;
 		private CommonPage commonpage;
 
-		public Graph_stepdefination() {
+		public Graph_stepdefination6() {
 			
 			graphspage = new GraphsPage(Driverfactory.getDriver());
 			commonpage = new CommonPage(driver);

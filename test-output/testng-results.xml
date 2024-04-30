@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="22" passed="20" failed="2" skipped="0">
+<testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-22T18:00:12 CDT" name="Default suite" finished-at="2024-04-22T18:07:43 CDT" duration-ms="450727">
+  <suite started-at="2024-04-30T12:19:31 CDT" name="Suite" finished-at="2024-04-30T12:20:12 CDT" duration-ms="40919">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.Runner@4167d97b]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.runner@3a0d172f]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-04-22T18:00:12 CDT" name="Default test" finished-at="2024-04-22T18:07:43 CDT" duration-ms="450727">
-      <class name="DS.testrunner.Runner">
-        <test-method is-config="true" signature="defineBrowser(java.lang.String)[pri:0, instance:DS.testrunner.Runner@4167d97b]" started-at="2024-04-22T18:00:12 CDT" name="defineBrowser" finished-at="2024-04-22T18:00:12 CDT" duration-ms="26" status="PASS">
+    <test started-at="2024-04-30T12:19:31 CDT" name="Test" finished-at="2024-04-30T12:19:31 CDT" duration-ms="51">
+    </test> <!-- Test -->
+    <test started-at="2024-04-30T12:19:31 CDT" name="Testing Chrome" finished-at="2024-04-30T12:20:12 CDT" duration-ms="40666">
+      <class name="DS.testrunner.runner">
+        <test-method is-config="true" signature="defineBrowser(java.lang.String)[pri:0, instance:DS.testrunner.runner@3a0d172f]" started-at="2024-04-30T12:19:31 CDT" name="defineBrowser" finished-at="2024-04-30T12:19:31 CDT" duration-ms="57" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,22 +23,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- defineBrowser -->
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:DS.testrunner.Runner@4167d97b]" started-at="2024-04-22T18:00:12 CDT" name="setUpClass" finished-at="2024-04-22T18:00:13 CDT" duration-ms="772" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:DS.testrunner.runner@3a0d172f]" started-at="2024-04-30T12:19:31 CDT" name="setUpClass" finished-at="2024-04-30T12:19:33 CDT" duration-ms="1682" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2fc2305a]]>
+                <![CDATA[org.testng.TestRunner@51e4ccb3]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.Runner@4167d97b]" started-at="2024-04-22T18:00:13 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-22T18:00:45 CDT" duration-ms="32207" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.runner@3a0d172f]" started-at="2024-04-30T12:19:33 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-30T12:20:05 CDT" duration-ms="31976" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Arrays Module"]]>
+                <![CDATA["Arrays Module Validdata"]]>
               </value>
             </param>
             <param index="1">
@@ -45,10 +47,34 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to find element with locator By.xpath: //a[text()='Try here>>>']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.4.1', java.version: '17.0.10'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //a[text()='Try here>>>']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.4.1', java.version: '17.0.10'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+at DS.pages.Arrayspage.arraySubLinks(Arrayspage.java:61)
+at DS.stepdefination.Arrays_stepdefination5.user_click_on_left_panel_links_in_Array_module(Arrays_stepdefination5.java:39)
+at ✽.user click on left panel links in Array module(file:///Users/muvva/Desktop/new/DSAlgoproject1/src/test/resources/featurefile/arrays.feature:11)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.Runner@4167d97b]" started-at="2024-04-22T18:00:45 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-22T18:01:14 CDT" duration-ms="28746" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.runner@3a0d172f]" started-at="2024-04-30T12:19:33 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-30T12:20:03 CDT" duration-ms="29799" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -61,14 +87,58 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchWindowException">
+            <message>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.91)
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.4.1', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e92916f9a12269dc3de909a30cb763e4, findElement {value=//a[@href='arrays-in-python'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.91, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: /var/folders/r5/mcc3cg2n7w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51194}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51194/devtoo..., se:cdpVersion: 124.0.6367.91, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e92916f9a12269dc3de909a30cb763e4]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.91)
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.4.1', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e92916f9a12269dc3de909a30cb763e4, findElement {value=//a[@href='arrays-in-python'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.91, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: /var/folders/r5/mcc3cg2n7w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51194}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51194/devtoo..., se:cdpVersion: 124.0.6367.91, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e92916f9a12269dc3de909a30cb763e4
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+at DS.pages.Arrayspage.arraysinPython(Arrayspage.java:47)
+at DS.stepdefination.Arrays_stepdefination5.user_click_on_Arrays_in_Python_button_in_Array_module(Arrays_stepdefination5.java:33)
+at ✽.user click on Arrays in Python button in Array module(file:///Users/muvva/Desktop/new/DSAlgoproject1/src/test/resources/featurefile/arrays.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.Runner@4167d97b]" started-at="2024-04-22T18:01:14 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-22T18:01:28 CDT" duration-ms="13843" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.runner@3a0d172f]" started-at="2024-04-30T12:19:33 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-30T12:20:09 CDT" duration-ms="36237" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Practice uestions"]]>
+                <![CDATA["Practice Questions for valid data"]]>
               </value>
             </param>
             <param index="1">
@@ -77,352 +147,58 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.IndexOutOfBoundsException">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
             <message>
-              <![CDATA[Index 0 out of bounds for length 0]]>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.91)
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.4.1', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5592e0fec9f6cb16dee8b29676246640, findElement {value=//div[@class='CodeMirror-code']/div, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.91, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: /var/folders/r5/mcc3cg2n7w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51193}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51193/devtoo..., se:cdpVersion: 124.0.6367.91, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5592e0fec9f6cb16dee8b29676246640]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
-at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-at java.base/java.util.Objects.checkIndex(Objects.java:361)
-at java.base/java.util.ArrayList.get(ArrayList.java:427)
-at DS.pages.Arrayspage.practiceQuestionListValidData(Arrayspage.java:97)
-at DS.stepdefination.Arrays_stepdefination.user_should_be_able_to_enter_the_code(Arrays_stepdefination.java:56)
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.91)
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.4.1', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5592e0fec9f6cb16dee8b29676246640, findElement {value=//div[@class='CodeMirror-code']/div, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.91, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: /var/folders/r5/mcc3cg2n7w7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51193}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51193/devtoo..., se:cdpVersion: 124.0.6367.91, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5592e0fec9f6cb16dee8b29676246640
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+at DS.pages.Arrayspage.practiceQuestionListValidData(Arrayspage.java:122)
+at DS.stepdefination.Arrays_stepdefination5.user_should_be_able_to_enter_the_code(Arrays_stepdefination5.java:58)
 at ✽.user should be able to enter the code(file:///Users/muvva/Desktop/new/DSAlgoproject1/src/test/resources/featurefile/arrays.feature:22)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IndexOutOfBoundsException -->
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.Runner@4167d97b]" started-at="2024-04-22T18:01:28 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-22T18:01:54 CDT" duration-ms="26437" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Data Structure Validation for Invalidadata"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Data Structure Intruduction"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.Runner@4167d97b]" started-at="2024-04-22T18:01:54 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-22T18:02:21 CDT" duration-ms="26705" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Data Structure Validation"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Data Structure Intruduction"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.Runner@4167d97b]" started-at="2024-04-22T18:02:21 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-22T18:02:48 CDT" duration-ms="27123" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Graph Valid Data"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Graph"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.Runner@4167d97b]" started-at="2024-04-22T18:02:48 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-22T18:03:13 CDT" duration-ms="24959" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Graph InValid Data"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Graph"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.Runner@4167d97b]" started-at="2024-04-22T18:03:13 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-22T18:03:21 CDT" duration-ms="7914" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Homepage Validation"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Homepage"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.Runner@4167d97b]" started-at="2024-04-22T18:03:21 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-22T18:03:57 CDT" duration-ms="36521" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["LinkedList Valid Data"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["LinkedList"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.Runner@4167d97b]" started-at="2024-04-22T18:03:57 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-22T18:04:23 CDT" duration-ms="25380" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["LinkedList InValid Data"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["LinkedList"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.Runner@4167d97b]" started-at="2024-04-22T18:04:23 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-22T18:04:33 CDT" duration-ms="10168" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Login Validation"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login Page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.Runner@4167d97b]" started-at="2024-04-22T18:04:33 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-22T18:04:42 CDT" duration-ms="9038" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Login Validation for Invalid Data"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login Page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.Runner@4167d97b]" started-at="2024-04-22T18:04:42 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-22T18:04:51 CDT" duration-ms="9051" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Login Validation for Invalid Data"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login Page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.Runner@4167d97b]" started-at="2024-04-22T18:04:51 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-22T18:05:00 CDT" duration-ms="9090" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Login Validation for Invalid Data"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login Page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.Runner@4167d97b]" started-at="2024-04-22T18:05:00 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-22T18:05:11 CDT" duration-ms="10558" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Practice questions"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Arrays Practice questions"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.IndexOutOfBoundsException">
-            <message>
-              <![CDATA[Index 0 out of bounds for length 0]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
-at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-at java.base/java.util.Objects.checkIndex(Objects.java:361)
-at java.base/java.util.ArrayList.get(ArrayList.java:427)
-at DS.pages.Arrayspage.practiceQuestionListValidData(Arrayspage.java:97)
-at DS.stepdefination.Arrays_stepdefination.user_should_be_able_to_enter_the_code(Arrays_stepdefination.java:56)
-at ✽.user should be able to enter the code(file:///Users/muvva/Desktop/new/DSAlgoproject1/src/test/resources/featurefile/practiceQuestions.feature:8)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IndexOutOfBoundsException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.Runner@4167d97b]" started-at="2024-04-22T18:05:11 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-22T18:05:22 CDT" duration-ms="11474" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["open Registration page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Registartion page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.Runner@4167d97b]" started-at="2024-04-22T18:05:22 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-22T18:05:34 CDT" duration-ms="12066" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["open Registration page for negative cases"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Registartion page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.Runner@4167d97b]" started-at="2024-04-22T18:05:34 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-22T18:05:46 CDT" duration-ms="12032" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["open Registration page for negative cases"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Registartion page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.Runner@4167d97b]" started-at="2024-04-22T18:05:46 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-22T18:05:58 CDT" duration-ms="11783" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["open Registration page for negative cases"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Registartion page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.Runner@4167d97b]" started-at="2024-04-22T18:05:58 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-22T18:06:10 CDT" duration-ms="11584" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["open Registration page for negative cases"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Registartion page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.Runner@4167d97b]" started-at="2024-04-22T18:06:10 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-22T18:06:46 CDT" duration-ms="35980" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Tree Valid data"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Tree module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:DS.testrunner.Runner@4167d97b]" started-at="2024-04-22T18:06:46 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-22T18:07:43 CDT" duration-ms="57089" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Tree Invalid data"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Tree module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:DS.testrunner.Runner@4167d97b]" started-at="2024-04-22T18:07:43 CDT" name="tearDownClass" finished-at="2024-04-22T18:07:43 CDT" duration-ms="24" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:DS.testrunner.runner@3a0d172f]" started-at="2024-04-30T12:20:09 CDT" name="tearDownClass" finished-at="2024-04-30T12:20:12 CDT" duration-ms="2594" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- DS.testrunner.Runner -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- DS.testrunner.runner -->
+    </test> <!-- Testing Chrome -->
+  </suite> <!-- Suite -->
 </testng-results>

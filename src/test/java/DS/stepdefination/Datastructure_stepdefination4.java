@@ -8,13 +8,13 @@ import DS.pages.DataStructurePage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Datastructure_stepdefination {
+public class Datastructure_stepdefination4 {
 	public WebDriver driver = Driverfactory.getDriver();
 
 	private DataStructurePage dataStructurePage;
 	private CommonPage commonpage;
 
-	public Datastructure_stepdefination() {
+	public Datastructure_stepdefination4() {
 		dataStructurePage = new DataStructurePage(Driverfactory.getDriver());
 		commonpage = new CommonPage(driver);
 	}
@@ -46,7 +46,7 @@ public class Datastructure_stepdefination {
 	@When("user enters invalid {string} in editor")
 	public void enters_invalid_text_in_editor(String text) throws InterruptedException {
 		String code = dataStructurePage.pythoncCodeFornegative(null, null, null, 2, 0);
-		Thread.sleep(2000);
+		
 		dataStructurePage.pythoncode(code);
 
 	}

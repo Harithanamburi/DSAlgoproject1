@@ -70,7 +70,7 @@ public class Stackpage {
 		
 		public void pythonCode() throws InterruptedException {
 			
-									    
+							    
 			driver.findElement(pythonCd).sendKeys("print \"hello\"");
 		}
 		
