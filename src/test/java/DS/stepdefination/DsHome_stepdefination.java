@@ -8,7 +8,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class DsHome_stepdefination1 {
+public class DsHome_stepdefination {
 	private WebDriver driver = Driverfactory.getDriver();
 	private DSHomepage home = new DSHomepage(driver);
 	

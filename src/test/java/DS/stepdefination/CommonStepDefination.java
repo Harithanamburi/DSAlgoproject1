@@ -13,7 +13,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class CommonStepDefination3 {
+public class CommonStepDefination {
 
 	public WebDriver driver = Driverfactory.getDriver();
 	private DataStructurePage dataStructurePage;
@@ -21,7 +21,7 @@ public class CommonStepDefination3 {
 	private CommonPage commonpage;
 	private Treepage treepage;
 
-	public CommonStepDefination3() {
+	public CommonStepDefination() {
 		dataStructurePage = new DataStructurePage(Driverfactory.getDriver());
 		arrayspage = new Arrayspage(Driverfactory.getDriver());
 		commonpage = new CommonPage(driver);

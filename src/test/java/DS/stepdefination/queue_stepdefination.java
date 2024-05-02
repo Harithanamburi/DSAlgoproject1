@@ -7,7 +7,7 @@ import DS.pages.queuePage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
-public class queue_stepdefination8 {
+public class queue_stepdefination {
 	
 	private WebDriver driver;
 	private queuePage queue = new queuePage(Driverfactory.getDriver());

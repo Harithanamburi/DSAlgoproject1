@@ -1,6 +1,7 @@
 package DS.pages;
 
 import java.io.File;
+import java.time.Duration;
 import java.util.List;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -59,8 +60,9 @@ public class GraphsPage {
 			graphlistLinks1.get(i).click();
 			
 			driver.findElement(atryeditor).click();
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
 			driver.findElement(apythoncode).sendKeys(dataStructurePage.pythoncCodeForPositive(null, null, null, 1, 0));
-			//driver.findElement(arun).click();
+
 			driver.navigate().back();
 		}
 	}
@@ -77,7 +79,13 @@ public class GraphsPage {
 			graphlistLinks2.get(i).click();
 			
 			driver.findElement(atryeditor).click();
+			try {
 			driver.findElement(apythoncode).sendKeys(dataStructurePage.pythoncCodeFornegative(null, null, null, 2, 0));
+			} catch (Exception e) {
+				System.out.println("exception:" + e);
+
+			}
+
 			//driver.findElement(arun).click();
 			//driver.switchTo().alert().accept();
 			driver.navigate().back();

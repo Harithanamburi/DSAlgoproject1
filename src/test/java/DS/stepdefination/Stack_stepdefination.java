@@ -9,7 +9,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Stack_stepdefination9 {
+public class Stack_stepdefination {
 	
 	private WebDriver driver;
 	private Stackpage stack = new Stackpage(Driverfactory.getDriver());

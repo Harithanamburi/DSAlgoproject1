@@ -7,13 +7,13 @@ import DS.pages.Treepage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Tree_stepdefination10 {
+public class Tree_stepdefination {
 	public WebDriver driver = Driverfactory.getDriver();
 	private Treepage tree = new Treepage(Driverfactory.getDriver());
 
 	@Then("Click on Tree Get started button")
-	public void click_on_tree_get_started_button() {
-		tree.getsatartbut();
+	public void click_on_tree_get_started_button() throws InterruptedException {
+		tree.getsatartbutton();
 	}
 
 	@When("user click on Overview button  in Tree module")

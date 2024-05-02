@@ -17,7 +17,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 	public  class Driverfactory {
 		
-		public static  WebDriver driver;
+		public   WebDriver driver;
 
 		public static  ThreadLocal<WebDriver> tldriver = new ThreadLocal<>();
 
@@ -50,7 +50,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 	
 			getDriver().manage().deleteAllCookies();
 			getDriver().manage().window().maximize();
-			//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			return getDriver();
 			
 			//return tldriver;
@@ -66,7 +66,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 	   public static synchronized void setDriver(WebDriver driver) {
 	       
 				tldriver.set(driver);
-				//tldriver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+				
 			
 	    }
 

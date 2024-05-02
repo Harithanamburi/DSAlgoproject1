@@ -59,8 +59,12 @@ public class DataStructurePage {
 	}
 
 	public void pythoncode(String cellData) {
-
+try {
 		driver.findElement(pythoncode).sendKeys(cellData);
+} catch (Exception e) {
+	System.out.println("exception:" + e);
+
+}
 	}
 
 

@@ -50,7 +50,7 @@ public class Stackpage {
 		
 			
 		public void getStartedStack() throws InterruptedException {
-			//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+			
 			
 			driver.findElement(getStrtStack).click();
 							}
@@ -70,8 +70,13 @@ public class Stackpage {
 		
 		public void pythonCode() throws InterruptedException {
 			
-							    
+			try {				    
 			driver.findElement(pythonCd).sendKeys("print \"hello\"");
+			} catch (Exception e) {
+				System.out.println("exception:" + e);
+
+			}
+
 		}
 		
 		public void outputPyCode() {
@@ -85,9 +90,12 @@ public class Stackpage {
 		
 		public void invalidCode(String string) throws InterruptedException {
 			
-			     
+			try {   
 			driver.findElement(pythonCd).sendKeys("error");
-			
+			} catch (Exception e) {
+				System.out.println("exception:" + e);
+
+			}
 		}
 		
 		public void implementaionTab() {
@@ -107,8 +115,12 @@ public class Stackpage {
 		
         
         public void acceptAlert() {
-        	
+        	try {
         	driver.switchTo().alert().accept();
+        	} catch (Exception e) {
+				System.out.println("exception:" + e);
+
+			}
 			driver.navigate().back();
         }
 

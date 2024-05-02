@@ -8,13 +8,13 @@ import DS.pages.DataStructurePage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Datastructure_stepdefination4 {
+public class Datastructure_stepdefination {
 	public WebDriver driver = Driverfactory.getDriver();
 
 	private DataStructurePage dataStructurePage;
 	private CommonPage commonpage;
 
-	public Datastructure_stepdefination4() {
+	public Datastructure_stepdefination() {
 		dataStructurePage = new DataStructurePage(Driverfactory.getDriver());
 		commonpage = new CommonPage(driver);
 	}

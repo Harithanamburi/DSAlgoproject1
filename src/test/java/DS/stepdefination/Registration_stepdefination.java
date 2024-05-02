@@ -10,7 +10,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Registration_stepdefination11 {
+public class Registration_stepdefination {
 
 	private WebDriver driver;
 	private registrationpage register = new registrationpage(Driverfactory.getDriver());

@@ -42,5 +42,15 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="/Users/muvva/Downloads/poi-src-5.2.5-20231118.zip"/>
+	<classpathentry kind="lib" path="/Users/muvva/.m2/repository/org/seleniumhq/selenium/selenium-support/4.18.0/selenium-support-4.18.0.jar" sourcepath="/Users/muvva/.m2/repository/org/seleniumhq/selenium/selenium-support/4.18.0/selenium-support-4.18.0-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/muvva/.m2/repository/org/seleniumhq/selenium/selenium-support/4.18.0/selenium-support-4.18.0-javadoc.jar!/"/>
+			<attribute name="maven.groupId" value="org.seleniumhq.selenium"/>
+			<attribute name="maven.artifactId" value="selenium-support"/>
+			<attribute name="maven.version" value="4.18.0"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

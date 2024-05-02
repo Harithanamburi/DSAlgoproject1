@@ -16,8 +16,8 @@ import utilities.ConfigReader;
 
 //@RunWith(Cucumber.class)
 @CucumberOptions(
-		features={"src/test/resources/featurefile/arrays.feature"},
-		//tags="@Arrays",
+		features={"src/test/resources/featurefile"},
+		tags="@Tree or @Arrays",
 		glue ={"DS.stepdefination", "DS.hooks","featurefile"},
 		dryRun=false,
 		monochrome=true,
@@ -27,7 +27,7 @@ import utilities.ConfigReader;
 public class runner extends AbstractTestNGCucumberTests {
 	@BeforeTest
 	@Parameters({"browser"})
-	public void defineBrowser(@Optional ("chrome")String  browser) throws Exception {
+	public void defineBrowser(@Optional ("firefox")String  browser) throws Exception {
 		ConfigReader.setBrowserType(browser);
 		System.out.println("browser: " +browser);
 	

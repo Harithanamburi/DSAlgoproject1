@@ -3,7 +3,8 @@ package DS.pages;
 import java.util.List;
 
 import java.io.File;
-import java.util.List;
+import java.io.IOException;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -17,7 +18,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 
+import java.time.Duration;
+import org.openqa.selenium.NoSuchElementException;
 import DS.driverfactory.Driverfactory;
 
 public class Arrayspage {
@@ -37,17 +44,19 @@ public class Arrayspage {
 	private By apythoncode = By.xpath("//div[contains(@class,'CodeMirror')]//textarea");
 	private By arun = By.xpath("//button[@type='button']");
 	private By practiceQuestions = By.xpath("//a[@href='/array/practice']");
-
+//public List<WebElement> practiceQuestions1 = driver.findElements(By.xpath("//div[@class='list-group']"));
 	public void agetstartedarray() {
 
 		driver.findElement(agetstartedarray).click();
 	}
 
 	public void arraysinPython() {
+
 		driver.findElement(arraysinPython).click();
 	}
 
 	public void arraySubLinks() throws InterruptedException {
+
 		List<WebElement> arrayLinks = driver.findElements(arraySubLinks);
 		for (int i = 0; i < arrayLinks.size(); i++) {
 
@@ -56,14 +65,15 @@ public class Arrayspage {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", arraySubLinks1.get(i), "style",
 					originalStyle + "border: 2px solid red;");
+
 			arraySubLinks1.get(i).click();
 
 			driver.findElement(atryeditor).click();
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 			driver.findElement(apythoncode).sendKeys(dataStructurePage.pythoncCodeForPositive(null, null, null, 1, 0));
-			//driver.findElement(arun).click();
-
 			driver.navigate().back();
 		}
+
 	}
 
 	public void arraySubLinksNegative() throws InterruptedException {
@@ -77,11 +87,10 @@ public class Arrayspage {
 					originalStyle + "border: 2px solid red;");
 
 			arraySubLinks2.get(i).click();
+
 			driver.findElement(atryeditor).click();
-			
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 			driver.findElement(apythoncode).sendKeys(dataStructurePage.pythoncCodeFornegative(null, null, null, 2, 0));
-			//driver.findElement(arun).click();
-			//driver.switchTo().alert().accept();
 			driver.navigate().back();
 		}
 
@@ -91,11 +100,11 @@ public class Arrayspage {
 		driver.findElement(practiceQuestions).click();
 
 	}
-
 	public void practiceQuestionListValidData() throws InterruptedException {
-		List<WebElement> practiceQuestions = driver.findElements(By.xpath("/html/body/div/a"));
-		for (int l = 0; l < practiceQuestions.size(); l++) {
-			practiceQuestions.get(l).click();
+		List<WebElement> practiceQuestions1 = driver.findElements(By.xpath("//div[@class='list-group']"));
+		for (int l =0; l < practiceQuestions1.size(); l++) {
+			Thread.sleep(500);
+			practiceQuestions1.get(l).click();
 
 			{
 				String cellData = " ";
@@ -104,15 +113,16 @@ public class Arrayspage {
 							"/Users/muvva/Desktop/new/DSAlgoproject1/src/main/java/utilities/ExcelReader.xlsx"));
 					Sheet sheet = workbook.getSheet("pythonCode");
 
-					Row row = sheet.getRow(3 + l);
+					Row row = sheet.getRow(3+l);
 
 					Cell cell = row.getCell(0);
 
 					if (cell != null) {
 						cellData = cell.getStringCellValue();
+						System.out.println("cellData:" +cellData);
 
 					}
-					//workbook.close();
+					workbook.close();
 
 				} catch (Exception e) {
 					System.out.println("exception:" + e);
@@ -121,7 +131,7 @@ public class Arrayspage {
 
 				WebElement arraylinkcodeForText = driver.findElement(By.xpath("//div[@class='CodeMirror-code']/div"));
 				WebElement apythoncode = driver.findElement(By.xpath("//form[@id='answer_form']/div/div/div/textarea"));
-			while (arraylinkcodeForText.getText().equals("1")) {
+			while (!arraylinkcodeForText.getText().equals("1")) {
 					Actions action = new Actions(driver); 
 					action.moveToElement(apythoncode); 
 					
@@ -147,9 +157,12 @@ public class Arrayspage {
 	}
 
 	public void practiceQuestionListInValidData() throws InterruptedException {
-		List<WebElement> practiceQuestions = driver.findElements(By.xpath("/html/body/div/a"));
-		for (int m = 0; m < practiceQuestions.size(); m++) {
-			practiceQuestions.get(m).click();
+		List<WebElement> practiceQuestions1 = driver.findElements(By.xpath("//div[@class='list-group']"));
+		for (int m = 0; m < practiceQuestions1.size(); m++) {
+//			Wait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+//			wait.wait(1000);
+			//wait.until(ExpectedConditions.elementToBeClickable(practiceQuestions1));
+			practiceQuestions1.get(m).click();
 
 			{
 				String cellData = " ";
@@ -166,7 +179,7 @@ public class Arrayspage {
 						cellData = cell.getStringCellValue();
 
 					}
-					//workbook.close();
+					workbook.close();
 
 				} catch (Exception e) {
 					System.out.println("exception:" + e);
@@ -176,11 +189,11 @@ public class Arrayspage {
 				WebElement arraylinkcodeForText = driver.findElement(By.xpath("//div[@class='CodeMirror-code']/div"));
 				WebElement apythoncode = driver.findElement(By.xpath("//form[@id='answer_form']/div/div/div/textarea"));
 
-			/*	while (!arraylinkcodeForText.getText().equals("1")) {
+			while (!arraylinkcodeForText.getText().equals("1")) {
 					Actions action = new Actions(driver); 
 					action.moveToElement(apythoncode); 
 					apythoncode.sendKeys(Keys.DELETE);
-				}*/
+				}
 				String[] str1 = cellData.split("\n");
 				for (int i = 0; i < str1.length; i++) {
 					if (str1[i].equalsIgnoreCase("\\b")) {
@@ -199,4 +212,15 @@ public class Arrayspage {
 	}
 		
 	}
+	
+	
+		
+
+	
+	
+
+		
+	
+	
+
 

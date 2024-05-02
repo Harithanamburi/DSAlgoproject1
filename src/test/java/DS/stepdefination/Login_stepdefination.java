@@ -12,7 +12,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Login_stepdefination2 {
+public class Login_stepdefination {
 	private WebDriver driver = Driverfactory.getDriver();
 
 	private DSloginpage dsloginpage = new DSloginpage(driver);

@@ -1,5 +1,8 @@
 package DS.stepdefination;
 
+import java.io.IOException;
+
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.WebDriver;
 import DS.driverfactory.Driverfactory;
 import DS.pages.DataStructurePage;
@@ -11,13 +14,13 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Arrays_stepdefination5 {
+public class Arrays_stepdefination {
 	private WebDriver driver = Driverfactory.getDriver();
 
 	private Arrayspage array;
 	private CommonPage commonpage;
 
-	public Arrays_stepdefination5() {
+	public Arrays_stepdefination() {
 		array = new Arrayspage(Driverfactory.getDriver());
 		commonpage = new CommonPage(driver);
 	}
@@ -53,14 +56,14 @@ public class Arrays_stepdefination5 {
 	}
 
 	@Then("user should be able to enter the code")
-	public void user_should_be_able_to_enter_the_code() throws InterruptedException {
+	public void user_should_be_able_to_enter_the_code() throws InterruptedException, InvalidFormatException, IOException {
 		
 		array.practiceQuestionListValidData();
 		
 
 	}
 	@Then("user should be able to enter the  Inavalid code")
-	public void user_should_be_able_to_enter_the_inavalid_code() throws InterruptedException{
+	public void user_should_be_able_to_enter_the_inavalid_code() throws InterruptedException, InvalidFormatException, IOException{
 		
 		array.practiceQuestionListInValidData();
 
