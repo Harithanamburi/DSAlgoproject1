@@ -62,8 +62,9 @@ public class Treepage {
 	public void treehomelinksValid() {
 
 		List<WebElement> treeLinks = driver.findElements(treelinks);
+		System.out.println("Treelinks Size:"+ treeLinks.size());
+
 		for (int i = 0; i < treeLinks.size(); i++) {
-			System.out.println("Treelinks Size:"+ treeLinks.size());
 		
 			List<WebElement> treeLinks1 = driver.findElements(treelinks);
 			String originalStyle = treeLinks1.get(i).getAttribute("style");
@@ -83,9 +84,9 @@ public class Treepage {
 	public void treehomelinksinvalid() throws InterruptedException {
 
 		List<WebElement> treeLinks = driver.findElements(treelinks);
+		System.out.println("Treelinks Size:"+ treeLinks.size());
 
 		for (int i = 0; i < treeLinks.size(); i++) {
-			System.out.println("Treelinks Size:"+ treeLinks.size());
 			List<WebElement> treeLinks1 = driver.findElements(treelinks);
 			String originalStyle = treeLinks1.get(i).getAttribute("style");
 			JavascriptExecutor js = (JavascriptExecutor) driver;

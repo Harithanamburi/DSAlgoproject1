@@ -45,7 +45,7 @@ public class DataStructurePage {
 	public void timeComplexityLink() {
 		driver.findElement(timeComplexityLink).click();
 	}
-
+ 
 	public void timeComplexityLinkLeftPanel() {
 		driver.findElement(timeComplexityLinkLeftPanel).click();
 	}
@@ -58,9 +58,10 @@ public void pythoncode(String cellData) {
 
 	driver.findElement(pythoncode).sendKeys(cellData);
 }
-public void signoutbutton() {
-	driver.findElement(signOut).click();
-}
+//public void signoutbutton() {
+//	driver.navigate().back();
+//	driver.findElement(signOut).click();
+//}
 	
 	public String pythoncCodeForPositive(String filePath, WebElement pythoncode, String Excel_Login_Pythoncode,
 			int rowNum, int colNum) {
@@ -68,7 +69,7 @@ public void signoutbutton() {
 		String cellData = " ";
 		try {
 			Workbook workbook = new XSSFWorkbook(
-					new File("/Users/muvva/Desktop/DSAlgoproject1/Code/Excel_Login_Pythoncode.xlsx"));
+					new File("C:\\Users\\nambu\\eclipse-workspace\\DSAlgoproject1\\Code\\Excel_Login_Pythoncode.xlsx"));
 			Sheet sheet = workbook.getSheet("pythonCode");
 			Row row = sheet.getRow(1);
 			Cell cell = row.getCell(0);
@@ -95,7 +96,7 @@ public void signoutbutton() {
 
 		String cellData = " ";
 		try {
-			Workbook workbook = new XSSFWorkbook(new File("/Users/muvva/Desktop/DSAlgoproject1/Code/Excel_Login_Pythoncode.xlsx"));
+			Workbook workbook = new XSSFWorkbook(new File("C:\\Users\\nambu\\eclipse-workspace\\DSAlgoproject1\\Code\\Excel_Login_Pythoncode.xlsx"));
 			Sheet sheet = workbook.getSheet("pythonCode");
 			Row row = sheet.getRow(2);
 			Cell cell = row.getCell(0);

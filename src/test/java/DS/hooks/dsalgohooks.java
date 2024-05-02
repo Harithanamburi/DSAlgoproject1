@@ -21,11 +21,12 @@ import utilities.Configreader;
 
 public class dsalgohooks {
 
-	
+
 	private Driverfactory driverFactory;
 	private WebDriver driver;
 	private Configreader configReader;
 	Properties prop;
+
 	@Before(order = 0)
 	public void getProperty() {
 		configReader = new Configreader();
@@ -37,7 +38,7 @@ public class dsalgohooks {
 		String browserName = prop.getProperty("browser");
 		driverFactory = new Driverfactory();
 		driver = driverFactory.init_driver(browserName);
-		System.out.println(driver);
+
 	}
 
 	@After(order = 0)
@@ -50,10 +51,9 @@ public class dsalgohooks {
 		if (scenario.isFailed()) {
 			// take screenshot:
 			String screenshotName = scenario.getName().replaceAll(" ", "_");
-	        byte[] sourcePath = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-	        scenario.attach(sourcePath, "image/png", screenshotName);
+			byte[] sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+			scenario.attach(sourcePath, "image/png", screenshotName);
 
-			
 		}
 	}
 

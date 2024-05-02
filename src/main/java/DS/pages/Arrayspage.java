@@ -42,8 +42,9 @@ public class Arrayspage {
 
 	public void arraySubLinks() throws InterruptedException {
 		List<WebElement> arrayLinks = driver.findElements(arraySubLinks);
+		System.out.println("ArrayLinks Size:" + arrayLinks.size());
+
 		for (int i = 0; i < arrayLinks.size(); i++) {
-			System.out.println("ArrayLinks Size:" + arrayLinks.size());
 			List<WebElement> arraySubLinks1 = driver.findElements(arraySubLinks);
 			String originalStyle = arraySubLinks1.get(i).getAttribute("style");
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -61,8 +62,9 @@ public class Arrayspage {
 
 	public void arraySubLinksNegative() throws InterruptedException {
 		List<WebElement> arrayLinks = driver.findElements(arraySubLinks);
+		System.out.println("ArrayLinks Size:"+ arrayLinks.size());
+
 		for (int i = 0; i < arrayLinks.size(); i++) {
-			System.out.println("ArrayLinks Size:"+ arrayLinks.size());
 			List<WebElement> arraySubLinks2 = driver.findElements(arraySubLinks);
 			String originalStyle = arraySubLinks2.get(i).getAttribute("style");
 	JavascriptExecutor js = (JavascriptExecutor) driver;

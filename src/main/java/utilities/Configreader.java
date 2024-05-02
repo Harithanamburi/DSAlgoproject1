@@ -7,28 +7,29 @@ import java.util.Properties;
 
 public class Configreader {
 
-		private Properties prop;
+	private Properties prop;
 
-		public Properties init_prop() {
+	public Properties init_prop() {
 
-			prop = new Properties();
-			try {
-				FileInputStream ip = new FileInputStream("/Users/muvva/eclipse-workspace/DSAlgoproject1/src/test/resources/Config.properties/configproperties");
-				prop.load(ip);								
-			}
-			catch (FileNotFoundException e) {
-				e.printStackTrace();
-			}
-			catch (IOException e) {
-				e.printStackTrace();
-			}
-
-			return prop;
+		prop = new Properties();
+		try {
+			FileInputStream ip = new FileInputStream("C:\\Users\\nambu\\eclipse-workspace\\DSAlgoproject1\\src\\test\\resources\\Config.properties\\configproperties");
+			prop.load(ip);
 
 		}
+		catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return prop;
 
 	}
-	
+
+}
+
 	
 	
 

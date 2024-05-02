@@ -42,7 +42,7 @@ public class CommonStepDefination {
 
 	@Then("user should navigate details page of Time Complexity to click on Tryhere editor")
 	public void user_should_navigate_details_page_of_time_complexity() throws InterruptedException {
-//		Thread.sleep(2000);
+	Thread.sleep(2000);
 		dataStructurePage.tryEditor();
 	}
 

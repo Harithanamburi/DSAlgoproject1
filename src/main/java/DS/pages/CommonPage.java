@@ -40,6 +40,7 @@ public class CommonPage {
 	
 	public void signOut() {
 		driver.findElement(signOut).click();
+		driver.navigate().back();
 	}
 //	public void pythonCode() throws InterruptedException {
 //	
