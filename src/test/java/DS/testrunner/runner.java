@@ -17,7 +17,7 @@ import utilities.ConfigReader;
 //@RunWith(Cucumber.class)
 @CucumberOptions(
 		features={"src/test/resources/featurefile"},
-		tags="@Tree or @Arrays",
+		//tags="@Tree",
 		glue ={"DS.stepdefination", "DS.hooks","featurefile"},
 		dryRun=false,
 		monochrome=true,
