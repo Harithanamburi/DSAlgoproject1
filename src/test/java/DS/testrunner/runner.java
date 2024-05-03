@@ -21,7 +21,7 @@ import utilities.ConfigReader;
 		glue ={"DS.stepdefination", "DS.hooks","featurefile"},
 		dryRun=false,
 		monochrome=true,
-		plugin = {"pretty","html:htmlreports/target.html","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+		plugin = {"pretty","html:htmlreports/target.html","json:target/cucumber/runner.json","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
 	)			
 public class runner extends AbstractTestNGCucumberTests {
