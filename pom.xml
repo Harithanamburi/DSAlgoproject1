@@ -9,23 +9,23 @@
 	<artifactId>DSAlgoproject1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>DSAlgoproject1</name>
+	<!-- <name>DSAlgoproject1</name>-->
 	<!-- FIXME change it to the project's website -->
-	<url>http://www.example.com</url>
+	<!-- <url>http://www.example.com</url> -->
 
-	<properties>
+	<!-- <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
-	</properties>
+	</properties>-->
 
 	<dependencies>
-		<dependency>
+		<!-- <dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
 			<scope>test</scope>
-		</dependency>
+		</dependency>-->
 		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -126,11 +126,7 @@
 			<version>2.17.1</version> <!-- Specify the version you want to use -->
 		</dependency>
 
-		<dependency>
-			<groupId>tech.grasshopper</groupId>
-			<artifactId>extentreports-cucumber7-adapter</artifactId>
-			<version>1.14.0</version>
-		</dependency>
+		
 
 		<!--
 		https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber7-jvm -->
@@ -198,10 +194,10 @@
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.8.0</version>
 				</plugin>
-				<plugin>
+				<!--<plugin>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>2.22.1</version>
-				</plugin>
+				</plugin>-->
 				<plugin>
 					<artifactId>maven-jar-plugin</artifactId>
 					<version>3.0.2</version>
@@ -235,7 +231,6 @@
 						</suiteXmlFiles>
 
 						<parallel>methods</parallel>
-						<useUnlimitedThreadst>true</useUnlimitedThreadst>
 					</configuration>
 				</plugin>
 			</plugins>
