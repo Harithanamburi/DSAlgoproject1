@@ -62,20 +62,21 @@ public class LinkedListpage {
 			linkedlistLinks1.get(i).click();
 
 			driver.findElement(atryeditor).click();
-			try {
+			Thread.sleep(1000);
 				driver.findElement(apythoncode)
 						.sendKeys(dataStructurePage.pythoncCodeForPositive(null, null, null, 1, 0));
-			} catch (Exception e) {
-				System.out.println("exception:" + e);
+			
 
-			}
-			driver.navigate().back();
+				driver.findElement(arun).click();
+			   driver.navigate().back();
 		}
 	}
 
 	public void linkedListInValiddata() throws InterruptedException {
 		List<WebElement> linkedlistLinks = driver.findElements(leftPanelSublinks);
+
 		for (int i = 0; i < linkedlistLinks.size(); i++) {
+
 			List<WebElement> linkedlistLinks2 = driver.findElements(leftPanelSublinks);
 			String originalStyle = linkedlistLinks2.get(i).getAttribute("style");
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -85,13 +86,10 @@ public class LinkedListpage {
 			linkedlistLinks2.get(i).click();
 
 			driver.findElement(atryeditor).click();
-			try {
-				driver.findElement(apythoncode)
-						.sendKeys(dataStructurePage.pythoncCodeFornegative(null, null, null, 2, 0));
-			} catch (Exception e) {
-				System.out.println("exception:" + e);
+			Thread.sleep(1000);
+			driver.findElement(apythoncode).sendKeys(dataStructurePage.pythoncCodeFornegative(null, null, null, 2, 0));
 
-			}
+			driver.findElement(arun).click();
 			driver.switchTo().alert().accept();
 			driver.navigate().back();
 		}

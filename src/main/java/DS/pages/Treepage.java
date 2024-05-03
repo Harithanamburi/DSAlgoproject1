@@ -57,7 +57,7 @@ public class Treepage {
 	}
 
 	public void getsatartbutton() throws InterruptedException {
-		Thread.sleep(500);
+		
 		driver.findElement(getsatartbutton).click();
 	}
 
@@ -69,7 +69,7 @@ public class Treepage {
 
 		List<WebElement> treeLinks = driver.findElements(treelinks);
 		for (int i = 0; i < treeLinks.size(); i++) {
-			System.out.println("Treelinks Size:" + treeLinks.size());
+			
 
 			List<WebElement> treeLinks1 = driver.findElements(treelinks);
 			String originalStyle = treeLinks1.get(i).getAttribute("style");
@@ -79,14 +79,12 @@ public class Treepage {
 
 			treeLinks1.get(i).click();
 			driver.findElement(atryeditor).click();
-			try {
+			Thread.sleep(1000);
 				driver.findElement(apythoncode)
 						.sendKeys(dataStructurePage.pythoncCodeForPositive(null, null, null, 1, 0));
-			} catch (Exception e) {
-				System.out.println("exception:" + e);
-
-			}
-			driver.navigate().back();
+			
+				driver.findElement(runbutton).click();
+			   driver.navigate().back();
 		}
 	}
 
@@ -94,16 +92,22 @@ public class Treepage {
 		List<WebElement> treeLinks = driver.findElements(treelinks);
 
 		for (int i = 0; i < treeLinks.size(); i++) {
-			System.out.println("Treelinks Size:" + treeLinks.size());
 
-			treeLinks.get(i).click();
+			List<WebElement> treeLinks1 = driver.findElements(treelinks);
+			String originalStyle = treeLinks1.get(i).getAttribute("style");
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", treeLinks1.get(i), "style",
+					originalStyle + "border: 2px solid red;");
+
+			treeLinks1.get(i).click();
+
 			driver.findElement(atryeditor).click();
-			
+			Thread.sleep(1000);
 			driver.findElement(apythoncode).sendKeys(dataStructurePage.pythoncCodeFornegative(null, null, null, 2, 0));
-			Thread.sleep(100);
+
+			driver.findElement(runbutton).click();
 			driver.switchTo().alert().accept();
-	
-		driver.navigate().back();
-	}
+			driver.navigate().back();
+		}
 	}
 }
