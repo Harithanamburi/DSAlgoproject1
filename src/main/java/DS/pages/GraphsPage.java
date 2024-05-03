@@ -79,7 +79,7 @@ public class GraphsPage {
 			graphlistLinks2.get(i).click();
 			
 			driver.findElement(atryeditor).click();
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 			driver.findElement(apythoncode).sendKeys(dataStructurePage.pythoncCodeFornegative(null, null, null, 2, 0));
 
 			driver.findElement(arun).click();

@@ -62,7 +62,7 @@ public class LinkedListpage {
 			linkedlistLinks1.get(i).click();
 
 			driver.findElement(atryeditor).click();
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 				driver.findElement(apythoncode)
 						.sendKeys(dataStructurePage.pythoncCodeForPositive(null, null, null, 1, 0));
 			
